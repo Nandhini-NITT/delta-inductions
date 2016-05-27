@@ -1,0 +1,100 @@
+
+h1
+{
+color:white;
+position:relative;
+text-align:center;
+text-shadow: #EEEE00 0 0 10px, #FF0000 5px 5px 5px;
+}
+#endtime
+{
+text-align:center;
+color:white;
+}
+body
+{
+background-image: url("galaxy.jpg");
+}
+img
+{
+position:relative;
+text-align:right;
+padding:10px;
+left:40px;
+bottom:10px;
+}
+
+#head-content
+{
+position:absolute;
+left:52%;
+margin-right:-50%;
+transform:translate(-50%,-50%);
+font-family:cursive;
+font-size:15px
+}
+#head-content li{
+display:inline;
+color:red;
+padding:44px;
+position:relative;
+top:20px;
+
+}
+#main {
+	
+    font-size: 20px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: none;
+    border-radius: 8px;
+	position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+		
+}
+
+
+#main li { 
+
+display: -webkit-inline-box; 
+padding: 50px;
+border-radius:20px;
+color:white;
+background-color: #8AD9FF;
+}
+#play
+{
+position:relative;
+text-align:center;
+top:180px;
+left:350px;
+}
+#reset
+{
+position:relative;
+top:180px;
+left:300px;
+}
+input
+{
+position:relative;
+width:75;
+left:476;
+
+}
+button
+{
+position:absolute;
+top:140px;
+left:700;
+}
+#pause
+{
+position:relative;
+top:180px;
+left:180px;
+}
