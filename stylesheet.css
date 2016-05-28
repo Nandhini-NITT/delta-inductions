@@ -98,3 +98,16 @@ position:relative;
 top:180px;
 left:180px;
 }
+#stop
+{
+position:relative;
+top:250px;
+left:150px;
+}
+#sec_header
+{
+position:relative;
+top:170px;
+left:540px;
+color:white
+}
