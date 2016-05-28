@@ -1,4 +1,13 @@
-var min_count,sec_count,stop;
+var min_count,sec_count,stop,flag=0;
+function stop_timer()
+{
+clearInterval(stop);
+
+min_count=document.getElementById("target_min").value;
+sec_count=document.getElementById("target_sec").value;
+document.getElementById("min").innerHTML=('0'+min_count).slice(-2);
+document.getElementById("sec").innerHTML=('0'+sec_count).slice(-2);
+}
 function initialiser()
 {	clearInterval(stop);
     min_count=document.getElementById("target_min").value;
@@ -7,9 +16,9 @@ function initialiser()
 	alert("Please fill in the fields");
 	else
 	{
-	document.getElementById("min").innerHTML=min_count<10?'0'+min_count:min_count;
-    document.getElementById("sec").innerHTML=sec_count<10?'0'+sec_count:sec_count;
-    main_timer();
+	document.getElementById("min").innerHTML=('0'+min_count).slice(-2);
+    document.getElementById("sec").innerHTML=('0'+sec_count).slice(-2);
+	main_timer()
 	}
 }
 function main_timer()
@@ -23,8 +32,8 @@ if(sec_count==0)
 	}
 else
 sec_count--;
-document.getElementById("min").innerHTML=min_count<10?'0'+min_count:min_count;
-document.getElementById("sec").innerHTML=sec_count<10?'0'+sec_count:sec_count;
+document.getElementById("min").innerHTML=('0'+min_count).slice(-2);
+document.getElementById("sec").innerHTML=('0'+sec_count).slice(-2);
 },1000);
 }
 function pause_timer()
