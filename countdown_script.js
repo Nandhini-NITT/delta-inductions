@@ -5,32 +5,39 @@ function hide (elements) {
     elements[index].style.display = 'none';
   }
 }
+function unhide (elements) {
+  elements = elements.length ? elements : [elements];
+  for (var index = 0; index < elements.length; index++) {
+    elements[index].style.display = 'inline';
+  }
+}
 
 
 function stop_timer()
 {
 clearInterval(stop);
-
 min_count=document.getElementById("target_min").value;
 sec_count=document.getElementById("target_sec").value;
-
+if(min_count>=0)
+	{
+	unhide(document.getElementById("min"));
+	unhide(document.getElementById("head-content"));
+	hide(document.getElementById("sec_header"));
+	}
 }
 function initialiser()
-{	clearInterval(stop);
-    min_count=document.getElementById("target_min").value;
-    sec_count=document.getElementById("target_sec").value;
+{	stop_timer();
 	if(min_count=="" || sec_count=="")
 	alert("Please fill in the fields");
 	else
 	{
 	document.getElementById("min").innerHTML=('0'+min_count).slice(-2);
     document.getElementById("sec").innerHTML=('0'+sec_count).slice(-2);
-	main_timer()
+	main_timer();
 	}
 }
 function main_timer()
 {
-
 clearInterval(stop);
 stop=setInterval(function(){
 if(sec_count==0 && min_count>0)
@@ -40,9 +47,10 @@ if(sec_count==0 && min_count>0)
 	}
 else if(min_count==0 && sec_count==0)
 	{
+	min_count=0;
 	hide(document.getElementById("min"));
 	hide(document.getElementById("head-content"));
-	document.getElementById("sec_header").innerHTML="Seconds";
+	unhide(document.getElementById("sec_header"));
 	sec_count--;
 	}
 else 
